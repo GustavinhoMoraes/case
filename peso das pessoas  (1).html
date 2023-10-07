@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Pesso das pessoas</title>
+</head>
+<body>
+    <h1>peso de pessoas</h1>
+    <p> pessoa 1 : <span id="n1"></span> <span id="peso1"> </span> </p>
+    <p> pessoa 2: <span id="n2"></span>  <span id="peso2"> </span> </p>
+    <p> pessoa 3: <span id= "n3"></span>  <span id="peso3"> </span> </p>
+    <p> peso em ordem decresente: <span id = "ndecre"></span></p>
+    <script>
+        let n1= prompt( "digite o nome da primeira pessoa");
+        let peso1 = prompt( "digite o peso da primeira pessoa ");
+        let n2= prompt( "digite o nome da segunda pessoa")
+        let peso2 =prompt("digite o peso da segunda pessoa"); 
+        let n3= prompt( "digite o nome da terceira pessoa")
+        let peso3 = prompt("digite o peso da terceira pessoa");
+        let pa;
+        let pb;
+        let pc; 
+        
+        if(peso1>=peso2 && peso1>peso3){ 
+                 pa=peso1;
+                 if(peso2>pesp3) { 
+                 pb= peso2;
+                 pc=peso3;
+                 } else{ 
+                 pb=peso3;
+                 pc=peso2;
+                 } 
+                  
+        }
+       if(peso2>=peso1 && peso2>peso3){ 
+        pa=peso2;
+         if(p1>peso3){
+            pb = peso1;
+            pc = peso3;
+         } else{ 
+            pb = peso3;
+            pc = peso1;
+         } 
+         }
+         if (peso3 >= peso1 && peso3 > peso2){ 
+         pa=peso3;
+         if(peso2>peso1){ 
+            pb = peso2;
+            pc = peso1;
+         } else { 
+            pb = peso1;
+            pc = peso2;
+         }
+         }
+         if (peso1 == peso2 && peso1 == peso3){
+            pa = peso1;
+            pb = peso2;
+            pc = peso3; 
+         
+            
+        }
+        
+        
+        
+      document.getElementById('peso1').innerHTML= peso1;
+      document.getElementById('peso2').innerHTML= peso2;
+      document.getElementById('peso3').innerHTML= peso3;
+      document.getElementById('n1').innerHTML= n1;
+      document.getElementById('n2').innerHTML= n2;
+      document.getElementById('n3').innerHTML= n3;
+      document.getElementById('ndecre').innerHTML= pa+","+ pb + ","+pc;
+   </script>
+</body>
+</html>    

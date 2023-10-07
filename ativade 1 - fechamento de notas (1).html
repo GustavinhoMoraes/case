@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Fechamento de Semestre</title>
+</head>
+<body>
+    <h1> Fechamento de Semestre</h1>
+    <p> aluno: <span id="aluno"></span></p>
+    <p> nota1: <span id="n1"></span></p>
+    <p> nota2: <span id= "n2"></span></p>
+    <p> nota3: <span id= "n3"></span></p>
+    <p> Situaçâo: <span id= "situacao"><span</p>
+    <p> Nota em ordem decresente: <span id = "ndecre"></span></p>
+    <script>
+        let aluno = prompt( "digite o nome do aluno");
+        let n1 = Number(prompt("digite a primeira nota do aluno")); 
+        let n2 = Number(prompt("digite a segunda nota do aluno"));
+        let n3 = Number(prompt("digite a terceira nota do aluno"));
+        let ma;
+        let mb;
+        let mc; 
+        
+        let media = ( n1+n2+n3)/3;
+       
+        let situacao; 
+
+        if(media >=6){ 
+            situacao= "aprovado";
+
+        } else{ 
+            situacao= "reprovado";
+        }
+       if(n1>=n2 && n1>n3){ 
+                 ma=n1;
+                 if(n2>n3) { 
+                 mb= n2;
+                 mc=n3;
+                 } else{ 
+                 mb=n3;
+                 mc=n2;
+                 } 
+                  
+        }
+       if(n2>=n1 && n2>n3){ 
+        ma=n2;
+         if(n1>n3){
+            mb = n1;
+            mc = n3;
+         } else{ 
+            mb = n3;
+            mc = n1;
+         } 
+         }
+         if (n3 >= n1 && n3 > n2){ 
+         ma=n3;
+         if(n2>n1){ 
+            mb = n2;
+            mc = n1;
+         } else { 
+            mb = n1;
+            mc = n2;
+         }
+         }
+         if (n1 == n2 && n1 == n3){
+            ma = n1;
+            mb = n2;
+            mc = n3; 
+         
+            
+        }
+        
+      document.getElementById('aluno').innerHTML= aluno;
+      document.getElementById('n1').innerHTML= n1;
+      document.getElementById('n2').innerHTML= n2;
+      document.getElementById('n3').innerHTML= n3;
+      document.getElementById('situacao').innerHTML= situacao;
+      document.getElementById('ndecre').innerHTML=  ma +"," + mb+ ","+ mc;
+   </script>
+</body>
+</html>

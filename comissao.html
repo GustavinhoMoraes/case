@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>f</title>
+
+</head>
+
+<body>
+
+  <h1>comissao</h1>
+
+  <div id="p1"></div>
+
+  <br>
+
+  <div id="p2"></div>
+
+  <br>
+
+  <div id="p3"></div>
+
+
+ 
+
+  <script>
+
+    let funcionario = prompt("Digite o nome do funcionario");
+
+    let p = parseInt(prompt("quantos produtos ele vendeu?"));
+
+
+    let p1 ="";
+
+
+   
+
+   
+if(p<250) {p1=p*1.00;}
+if(p>=250 && p<500) {p1=p*1.50;}
+if(p>500) {p1=p*2.00;}
+ 
+
+ let retorno= funcionario+ "  vendeu R$: " +p+ " comissão R$: "+p1;   
+
+        document.getElementById("p1").innerHTML = retorno;
+
+      
+
+ 
+
+       
+
+ 
+
+ 
+
+  </script>
+
+</body>
+
+</html>
